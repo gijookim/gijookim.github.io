@@ -16,6 +16,12 @@ For full citation records, see my [Google Scholar](https://scholar.google.com/ci
 
 {% include bib_search.liquid %}
 
+<style>
+  .publications h2.bibliography {
+    color: #5f6368;
+  }
+</style>
+
 <div class="publications">
 
 {% bibliography %}
