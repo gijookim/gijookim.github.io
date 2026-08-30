@@ -20,6 +20,10 @@ For full citation records, see my [Google Scholar](https://scholar.google.com/ci
   .publications h2.bibliography {
     color: #5f6368;
   }
+
+  .publications ol.bibliography li .links a.btn {
+    font-size: 0.84rem;
+  }
 </style>
 
 <div class="publications">

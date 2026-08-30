@@ -267,6 +267,14 @@
           </a>
         {% endif %}
       {% endif %}
+      {% assign code_link = entry.code | default: entry.github %}
+      {% if code_link %}
+        <a href="{{ code_link }}" class="btn btn-sm z-depth-0" style="border-color: #6f42c1; color: #6f42c1;" role="button">GitHub</a>
+      {% endif %}
+      {% assign data_link = entry.data | default: entry.zenodo %}
+      {% if data_link %}
+        <a href="{{ data_link }}" class="btn btn-sm z-depth-0" style="border-color: #1682d4; color: #1682d4;" role="button">Zenodo</a>
+      {% endif %}
       {% assign scholar_userid = site.data.socials.scholar_userid.value | default: site.data.socials.scholar_userid %}
       {% if site.enable_publication_badges.google_scholar and entry.google_scholar_id %}
         <a
@@ -293,7 +301,7 @@
           {% endif %}
 
           <img
-            src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
+            src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige&style=flat-square"
             alt="{{ citation_count }} Google Scholar citations"
           >
         </a>
@@ -304,7 +312,7 @@
           role="button"
         >
           <img
-            src="https://img.shields.io/badge/scholar-search-4285F4?logo=googlescholar&labelColor=beige"
+            src="https://img.shields.io/badge/scholar-search-4285F4?logo=googlescholar&labelColor=beige&style=flat-square"
             alt="Google Scholar search"
           >
         </a>
@@ -339,9 +347,6 @@
       {% endif %}
       {% if entry.blog %}
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
-      {% endif %}
-      {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
