@@ -79,6 +79,6 @@ latest_posts:
 
 Hi, welcome to my homepage!
 
-I am a research scientist at the [Bywater Institute at Tulane University](https://bywater.tulane.edu/) with a research interest in enhancing our understanding of the complex dynamics of interdependent systems (e.g., water, food, energy, climate, etc.). My past research efforts have focused on adapting reservoir operations to be less vulnerable to climate change, emphasizing their connection to on-site reservoir management policies and stakeholder engagement through a participatory modeling framework.
+I am a research scientist at the [ByWater Institute at Tulane University](https://bywater.tulane.edu/) with a research interest in enhancing our understanding of the complex dynamics of interdependent systems (e.g., water, food, energy, climate, etc.). My past research efforts have focused on adapting reservoir operations to be less vulnerable to climate change, emphasizing their connection to on-site reservoir management policies and stakeholder engagement through a participatory modeling framework.
 
 My current research focus is on advancing resilient decision-making frameworks in complex systems (e.g., multi-sector, coupled human-nature systems). Please refer to other sections of this homepage for more detailed information about me!

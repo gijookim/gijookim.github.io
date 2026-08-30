@@ -267,14 +267,15 @@
           </a>
         {% endif %}
       {% endif %}
+      {% assign scholar_userid = site.data.socials.scholar_userid.value | default: site.data.socials.scholar_userid %}
       {% if site.enable_publication_badges.google_scholar and entry.google_scholar_id %}
         <a
-          href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
+          href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ scholar_userid }}&citation_for_view={{ scholar_userid }}:{{ entry.google_scholar_id }}"
           aria-label="Google Scholar link"
           role="button"
         >
           {% assign citation_count = 0 %}
-          {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+          {% assign scholar_id_key = scholar_userid | append: ':' | append: entry.google_scholar_id %}
           {% assign publication_key = entry.google_scholar_id %}
 
           {% if site.data.citations.papers[scholar_id_key] %}
