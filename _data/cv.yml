@@ -1,189 +1,118 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Gi Joo Kim
+  label: Research Scientist
+  affiliation: ByWater Institute at Tulane University
+  email: gkim3@tulane.edu
+  location: 1370 Port of New Orleans Pl, New Orleans, LA 70130
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: ""
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
+      username: gi-joo-kim-a92b2a212
+    - network: ORCID
+      username: 0000-0001-7577-9352
+    - network: Google Scholar
+      username: nyhZ_9EAAAAJ
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
+    street: 1370 Port of New Orleans Pl
+    city: New Orleans
+    region: Louisiana
+    postalCode: LA 70130
     countryCode: US
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Seoul National University
+        location: Seoul, South Korea
+        area: Civil and Environmental Engineering
+        studyType: Ph.D.
+        start_date: 2017-03
+        end_date: 2022-02
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Dissertation: Improving On-site Reservoir Operation Policies by Robust and Adaptive Optimization Models"
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: Korea University
+        location: Seoul, South Korea
+        area: Architectural, Civil, and Environmental Engineering
+        studyType: B.S.
+        start_date: 2013-03
+        end_date: 2017-02
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
+      - company: ByWater Institute, Tulane University
+        position: Research Scientist
+        location: New Orleans, LA, USA
+        start_date: 2025-09
+        end_date: present
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
+      - company: Lamontagne Lab, Tufts University
+        position: Postdoctoral Scholar
+        location: Medford, MA, USA
+        start_date: 2023-06
+        end_date: 2025-09
+        summary: "Advisor: Dr. Jonathan Lamontagne"
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+      - company: Institute of Construction and Environmental Engineering, Seoul National University
+        position: Postdoctoral Scholar
+        location: Seoul, South Korea
+        start_date: 2022-03
+        end_date: 2023-02
+        summary: "Advisor: Dr. Young-Oh Kim"
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+      - company: Department of Civil and Environmental Engineering, Seoul National University
+        position: Lecturer
+        location: Seoul, South Korea
+        start_date: 2022-09
+        end_date: 2023-02
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+      - company: Reed Research Group, Cornell University
+        position: Visiting Student
+        location: Ithaca, NY, USA
+        start_date: 2019-09
+        end_date: 2019-12
+        summary: "Advisor: Dr. Patrick Reed"
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - title: 2023 Best Ph.D. Dissertation Award
+        date: 2023-01
+        awarder: Korea Water Resources Association
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - title: Public Water and Big Data Competition Award
+        date: 2022-08
+        awarder: Korea Water Resources Association
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - title: Young Member Award
+        date: 2022-02
+        awarder: Gwanak Water Engineering Committee
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+      - title: Best Presentation Award
+        date: 2021-06
+        awarder: Korea Water Resources Association Conference
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+      - title: Excellence Award
+        date: 2018-07
+        awarder: Korea Climate Technology Idea Proposal Competition
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - title: Best Presentation Award
+        date: 2018-05
+        awarder: Korea Water Resources Association Conference
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - title: Excellence Award
+        date: 2017-07
+        awarder: Climate Change Academy for College Students
 
-      - name: English
-        summary: "Fluent"
+    Invited Talks:
+      - bullet: "Kim, G.J. (2026). Identifying Key Drivers of Future Food, Energy, and Water Security Outcomes through a Multisector Scenario Ensemble. Department of Civil and Environmental Engineering, Seoul National University, Seoul, South Korea, May 12, 2026."
+      - bullet: "Kim, G.J. (2026). Modeling Human-Earth System Interactions under Global Environmental Change. Department of Civil Engineering, Hannam University, Daejeon, South Korea, Apr 30, 2026."
+      - bullet: "Kim, G.J. (2025). From Global Resource Security to Local Water Resources Management: Modeling Human-Earth System Interactions under Climate Change. Department of River-Coastal Science and Engineering, Tulane University, New Orleans, LA, USA, Nov 6, 2025."
+      - bullet: "Kim, G.J. (2022). Adaptive and Robust Reservoir Management under Climate Change. Department of Civil, Environmental, and Plant Engineering, Chung-Ang University, Seoul, South Korea, Nov 16, 2022."
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    Professional Service:
+      - label: Professional Memberships
+        details: Decision Making Under Deep Uncertainty Society; American Geophysical Union; American Society of Civil Engineers; Asia Oceania Geosciences Society; Korea Water Resources Association
+      - label: Expert Panel Reviews and Advisory Activities
+        details: Panel Reviewer, Gulf Research Program, National Academies of Sciences, Engineering, and Medicine; Expert Reviewer, IPCC Special Report on Climate Change and Cities
+      - label: Journal Peer Reviews
+        details: Earth's Future; Water Resources Research; Journal of Hydrology; Natural Hazards; Stochastic Environmental Research and Risk Assessment; Journal of Water Resources Planning and Management; Journal of Hydro-environmental Research
