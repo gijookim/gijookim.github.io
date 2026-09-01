@@ -26,17 +26,15 @@ cv:
     Education:
       - institution: Seoul National University
         location: Seoul, South Korea
-        area: Civil and Environmental Engineering
-        studyType: Ph.D.
+        studyType: Ph.D., Civil and Environmental Engineering
         start_date: 2017-03
         end_date: 2022-02
         highlights:
-          - "Dissertation: Improving On-site Reservoir Operation Policies by Robust and Adaptive Optimization Models"
+          - "Dissertation Title: Improving On-site Reservoir Operation Policies by Robust and Adaptive Optimization Models"
 
       - institution: Korea University
         location: Seoul, South Korea
-        area: Architectural, Civil, and Environmental Engineering
-        studyType: B.S.
+        studyType: B.S., Architectural, Civil, and Environmental Engineering
         start_date: 2013-03
         end_date: 2017-02
 
@@ -45,7 +43,8 @@ cv:
         position: Research Scientist
         location: New Orleans, LA, USA
         start_date: 2025-09
-        end_date: present
+        end_date: Present
+        summary: "Advisor: Dr. John Sabo"
 
       - company: Lamontagne Lab, Tufts University
         position: Postdoctoral Scholar
@@ -54,14 +53,14 @@ cv:
         end_date: 2025-09
         summary: "Advisor: Dr. Jonathan Lamontagne"
 
-      - company: Institute of Construction and Environmental Engineering, Seoul National University
+      - company: Institute of Construction and Environmental Engineering,<br>Seoul National University
         position: Postdoctoral Scholar
         location: Seoul, South Korea
         start_date: 2022-03
         end_date: 2023-02
         summary: "Advisor: Dr. Young-Oh Kim"
 
-      - company: Department of Civil and Environmental Engineering, Seoul National University
+      - company: Department of Civil and Environmental Engineering,<br>Seoul National University
         position: Lecturer
         location: Seoul, South Korea
         start_date: 2022-09
@@ -70,44 +69,29 @@ cv:
       - company: Reed Research Group, Cornell University
         position: Visiting Student
         location: Ithaca, NY, USA
-        start_date: 2019-09
-        end_date: 2019-12
+        date: 2019
         summary: "Advisor: Dr. Patrick Reed"
 
-    Awards:
-      - title: 2023 Best Ph.D. Dissertation Award
-        date: 2023-01
-        awarder: Korea Water Resources Association
-
-      - title: Public Water and Big Data Competition Award
-        date: 2022-08
-        awarder: Korea Water Resources Association
-
-      - title: Young Member Award
-        date: 2022-02
-        awarder: Gwanak Water Engineering Committee
-
-      - title: Best Presentation Award
-        date: 2021-06
-        awarder: Korea Water Resources Association Conference
-
-      - title: Excellence Award
-        date: 2018-07
-        awarder: Korea Climate Technology Idea Proposal Competition
-
-      - title: Best Presentation Award
-        date: 2018-05
-        awarder: Korea Water Resources Association Conference
-
-      - title: Excellence Award
-        date: 2017-07
-        awarder: Climate Change Academy for College Students
-
     Invited Talks:
-      - bullet: "Kim, G.J. (2026). Identifying Key Drivers of Future Food, Energy, and Water Security Outcomes through a Multisector Scenario Ensemble. Department of Civil and Environmental Engineering, Seoul National University, Seoul, South Korea, May 12, 2026."
-      - bullet: "Kim, G.J. (2026). Modeling Human-Earth System Interactions under Global Environmental Change. Department of Civil Engineering, Hannam University, Daejeon, South Korea, Apr 30, 2026."
-      - bullet: "Kim, G.J. (2025). From Global Resource Security to Local Water Resources Management: Modeling Human-Earth System Interactions under Climate Change. Department of River-Coastal Science and Engineering, Tulane University, New Orleans, LA, USA, Nov 6, 2025."
-      - bullet: "Kim, G.J. (2022). Adaptive and Robust Reservoir Management under Climate Change. Department of Civil, Environmental, and Plant Engineering, Chung-Ang University, Seoul, South Korea, Nov 16, 2022."
+      - title: Identifying Key Drivers of Future Food, Energy, and Water Security Outcomes through a Multisector Scenario Ensemble
+        date: 2026-05-12
+        awarder: Department of Civil and Environmental Engineering, Seoul National University
+        summary: Seoul, South Korea
+
+      - title: Modeling Human-Earth System Interactions under Global Environmental Change
+        date: 2026-04-30
+        awarder: Department of Civil Engineering, Hannam University
+        summary: Daejeon, South Korea
+
+      - title: "From Global Resource Security to Local Water Resources Management: Modeling Human-Earth System Interactions under Climate Change"
+        date: 2025-11-06
+        awarder: Department of River-Coastal Science and Engineering, Tulane University
+        summary: New Orleans, LA, USA
+
+      - title: Adaptive and Robust Reservoir Management under Climate Change
+        date: 2022-11-16
+        awarder: Department of Civil, Environmental, and Plant Engineering, Chung-Ang University
+        summary: Seoul, South Korea
 
     Professional Service:
       - label: Professional Memberships
