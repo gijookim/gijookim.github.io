@@ -267,6 +267,9 @@
           </a>
         {% endif %}
       {% endif %}
+      {% if entry.mit_news %}
+        <a href="{{ entry.mit_news }}" class="btn btn-sm z-depth-0" style="border-color: #111111; color: #111111;" role="button">MIT News</a>
+      {% endif %}
       {% assign code_link = entry.code | default: entry.github %}
       {% if code_link %}
         <a href="{{ code_link }}" class="btn btn-sm z-depth-0" style="border-color: #6f42c1; color: #6f42c1;" role="button">GitHub</a>
