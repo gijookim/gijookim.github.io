@@ -3,23 +3,6 @@ layout: default
 ---
 
 <div class="post">
-  <style>
-    .cv ul.list-group,
-    .cv ul.items {
-      list-style: none;
-    }
-
-    .cv .list-group-item,
-    .cv ul.items > li {
-      list-style: none;
-    }
-
-    .cv .list-group-flush > .list-group-item {
-      border-top: 0;
-      border-bottom: 0;
-    }
-  </style>
-
   <header class="post-header">
     <h1 class="post-title">
       {{ page.display_title | default: page.title }}
@@ -97,85 +80,8 @@ layout: default
       {% assign combined_experience = exp | concat: vol | al_cv_sort_by_date %}
       {% if combined_experience.size > 0 %}
         <a class="anchor" id="experience"></a>
-        <div class="card mt-3 p-3 cv-appointments">
-          <h3 class="card-title font-weight-medium mb-2">Academic Appointments</h3>
-          <style>
-            .cv-appointments .list-group-item > .row,
-            .cv-education .list-group-item > .row,
-            .cv-awards .list-group-item > .row,
-            .cv-invited-talks .list-group-item > .row {
-              align-items: flex-start;
-            }
-
-            .cv-appointments .date-column .table-cv,
-            .cv-education .date-column .table-cv,
-            .cv-awards .text-center .table-cv,
-            .cv-invited-talks .text-center .table-cv {
-              left: 50%;
-              margin-top: 0.22rem;
-              position: relative;
-              transform: translateX(-50%);
-            }
-
-            .cv-appointments .date-column .table-cv,
-            .cv-appointments .date-column .table-cv tr,
-            .cv-appointments .date-column .table-cv td,
-            .cv-education .date-column .table-cv,
-            .cv-education .date-column .table-cv tr,
-            .cv-education .date-column .table-cv td,
-            .cv-awards .text-center .table-cv,
-            .cv-awards .text-center .table-cv tr,
-            .cv-awards .text-center .table-cv td,
-            .cv-invited-talks .text-center .table-cv,
-            .cv-invited-talks .text-center .table-cv tr,
-            .cv-invited-talks .text-center .table-cv td {
-              border: 0 !important;
-            }
-
-            .cv-appointments .date-column .badge,
-            .cv-education .date-column .badge,
-            .cv-awards .badge,
-            .cv-invited-talks .badge {
-              font-size: 0.82rem;
-              text-transform: none !important;
-              text-align: center;
-              white-space: nowrap;
-            }
-
-            .cv-appointments p.location,
-            .cv-education p.location {
-              font-size: 0.78rem;
-              text-align: center;
-            }
-
-            .cv-appointments h6[style*='font-style: italic'],
-            .cv-education h6[style*='font-style: italic'] {
-              margin-top: -0.25rem;
-              margin-bottom: 0;
-              line-height: 1.25;
-            }
-
-            .cv-appointments .list-group-item,
-            .cv-education .list-group-item,
-            .cv-awards .list-group-item,
-            .cv-invited-talks .list-group-item {
-              padding-top: 0.5rem;
-              padding-bottom: 0.5rem;
-            }
-
-            .cv-service .service-item + .service-item {
-              margin-top: 0.85rem;
-            }
-
-            .cv-service .service-label {
-              font-weight: 600;
-              margin-bottom: 0.18rem;
-            }
-
-            .cv-service .service-details {
-              font-weight: 300;
-            }
-          </style>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">Academic Appointments</h3>
           <div>
             {% assign entries = combined_experience %}
             {% include cv/experience.liquid %}
@@ -192,10 +98,8 @@ layout: default
         {% endif %}
 
         <a class="anchor" id="{{ section_title | slugify }}"></a>
-        <div class="card mt-3 p-3{% if section_title == 'Education' %} cv-education{% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %} cv-awards{% elsif section_title == 'Invited Talks' %} cv-invited-talks{% elsif section_title == 'Professional Service' %} cv-service{% endif %}">
-          <h3 class="card-title font-weight-medium{% if section_title == 'Education' or section_title == 'Awards' or section_title == 'Honors and Awards' or section_title == 'Invited Talks' %} mb-2{% endif %}">
-            {{- section_title -}}
-          </h3>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
           <div>
             {% if section_title == 'Education' %}
               {% assign entries = section_entries | al_cv_sort_by_date %}
@@ -227,15 +131,6 @@ layout: default
             {% elsif section_title == 'References' %}
               {% assign entries = section_entries %}
               {% include cv/references.liquid %}
-            {% elsif section_title == 'Professional Service' %}
-              <div class="card-text">
-                {% for entry in section_entries %}
-                  <div class="service-item">
-                    <div class="service-label">{{ entry.label }}</div>
-                    <div class="service-details">{{ entry.details }}</div>
-                  </div>
-                {% endfor %}
-              </div>
             {% else %}
               {% for entry in section_entries %}
                 {% if entry.bullet %}

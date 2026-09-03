@@ -1,0 +1,144 @@
+library(ggplot2)
+library(dplyr)
+library(ismev)
+
+#1 (A)
+FallCreek <- read.csv("fallcreek.csv",header=T)
+AnnMaxFlow <- FallCreek$Flow
+
+#(B)
+FallCreek %>%
+  mutate(Date=as.Date(FallCreek$Date,format="%Y/%m/%d"))
+
+
+#(C)
+ggplot(FallCreek,aes(x=Date,y=Flow,group=1)) +
+  geom_line() +
+  ggtitle("Line Graph of Annual Maxima") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  xlab("Date") +
+  ylab("Flow (cfs)")
+
+ggplot(FallCreek,aes(x=Flow)) +
+  geom_histogram() +
+  ggtitle("Histogram of Annual Maxima (Original Data Scale)") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  xlab("Annual Maximum Flow (cfs)") +
+  ylab("Frequency")
+
+ggplot(FallCreek,aes(x=Flow)) +
+  geom_histogram() +
+  scale_x_log10() +
+  ggtitle("Histogram of Annual Maxima (log10 Scale)") +
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab("Annual Maximum Flow (cfs)") +
+  ylab("Frequency")
+
+
+#(D)
+my.gev.fit <- gev.fit(AnnMaxFlow)
+MLE_parameters<-my.gev.fit$mle
+
+rank(AnnMaxFlow)/(length(AnnMaxFlow)+1)
+
+
+
+#(E) P-P plot
+FallCreek <- FallCreek %>%
+  mutate(plotting.pos=rank(AnnMaxFlow)/(length(AnnMaxFlow)+1)) %>%
+  mutate(gev.cdf=gevf(MLE_parameters,AnnMaxFlow))
+
+ggplot(FallCreek,aes(x=plotting.pos,y=gev.cdf)) +
+  geom_point() +
+  geom_abline() +
+  ggtitle("P-P Plot for Annual Maxima(GEV)") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  xlab("Theoretical Quantiles") +
+  ylab("Sample Quantiles")
+
+#(F)
+FallCreekDesignEvents <- data.frame(return.period=c(2,10,25,50,100,200))
+
+FallCreekDesignEvents <- FallCreekDesignEvents %>%
+  mutate(exceed.prob=1/return.period) %>%
+  mutate(return.level=gevq(MLE_parameters,exceed.prob))
+
+#(G)
+ggplot(FallCreekDesignEvents,aes(x=return.period,y=return.level)) +
+  geom_line() +
+  scale_x_log10() +
+  ggtitle("Return Period Plot for Annual Maxima") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  xlab("Return Period (years)") +
+  ylab("Point Estimates of Return Levels (cfs)")
+
+
+#############################################################################
+library(moments)
+library(tidyr)
+library(lubridate)
+library(POT)
+
+#2 (A-C)
+FallCreek <- FallCreek %>%
+  mutate(AnnMaxFlowlog10 = log10(AnnMaxFlow))
+
+mu.hat <- mean(FallCreek$AnnMaxFlowlog10)
+sigma.hat <- sd(FallCreek$AnnMaxFlowlog10)
+skew.hat <- skewness(FallCreek$AnnMaxFlowlog10) # = 0.6
+freq.fact = c(-0.099,1.328,1.939,2.359,2.755,3.132) # for skew = 0.6
+
+FallCreekDesignEvents <- FallCreekDesignEvents %>%
+  mutate(LP3.return.level= 10^(mu.hat+sigma.hat*freq.fact))
+
+FallCreek <- FallCreek %>%
+  mutate(Emp.return.period = 1/(1-plotting.pos))
+
+ggplot() + 
+  geom_line(data=FallCreekDesignEvents, aes(x=return.period,y=return.level,color="GEV")) +
+  scale_x_log10(name="Return Period") + 
+  scale_y_continuous(name="Return Levels (cfs)") +
+  geom_line(data=FallCreekDesignEvents,aes(x=return.period,y=LP3.return.level,color="LP3")) +
+  geom_point(data=FallCreek,aes(x=Emp.return.period,y=Flow)) +
+  ggtitle("Return Period Plot for Annual Maxima") +
+  theme(plot.title = element_text(hjust = 0.5)) 
+
+
+
+############### NOT ON THE ASSIGNMENT ## JUST SHOW IF NEEDED ################
+#############################################################################
+#(D) -Analysis Using POT Models
+IthacaPrcp <- read.table("Ithaca_Prcp.txt", header = T)
+IthacaPrcp <- IthacaPrcp %>%
+  mutate(WaterYear = Year*(Month<=9) + (Year+1)*(Month>=10)) 
+
+IthacaPrcp <- unite(IthacaPrcp, time, Year, Month, Day, sep="-") 
+IthacaPrcp$time <- ymd(IthacaPrcp$time)
+
+names(IthacaPrcp)[names(IthacaPrcp)=="Prcp"] <- "obs"
+
+#(b) (c)
+par(mfrow=c(1,1))
+mlr.plot<-mrl.plot(IthacaPrcp$obs,umin=0,umax=80)
+title(main="Mean Residual Life Plot")
+lines(c(20,20),c(-1000,10000),lty=3)
+
+#(d)
+clust.20<-clust(IthacaPrcp, u=20, time.cond=3, clust.max = TRUE)
+IthacaPrcpPOT <- IthacaPrcp[clust.20[,3],]
+gpd.fit.20 <- gpd.fit(xdat=clust.20[,2], threshold=20, show=FALSE)
+gpd.fit.20$mle
+
+#(e)
+IthacaPrcpPOT <- IthacaPrcpPOT %>%
+  mutate(plotting.position = rank(obs)/(length(obs)+1)) %>%
+  mutate(gpd.cdf = gpdf(gpd.fit.20$mle,20,clust.20[,2]))
+
+ggplot(IthacaPrcpPOT,aes(x=plotting.position, y=gpd.cdf)) +
+  geom_point() +
+  geom_abline() +
+  ggtitle("P-P Plot for Peaks over Threshold(GPD)") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  xlab("Theoretical Quantiles") +
+  ylab("Sample Quantiles")
+

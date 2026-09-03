@@ -94,9 +94,23 @@ cv:
         summary: Seoul, South Korea
 
     Professional Service:
-      - label: Professional Memberships
-        details: Decision Making Under Deep Uncertainty Society; American Geophysical Union; American Society of Civil Engineers; Asia Oceania Geosciences Society; Korea Water Resources Association
-      - label: Expert Panel Reviews and Advisory Activities
-        details: Panel Reviewer, Gulf Research Program, National Academies of Sciences, Engineering, and Medicine; Expert Reviewer, IPCC Special Report on Climate Change and Cities
-      - label: Journal Peer Reviews
-        details: Earth's Future; Water Resources Research; Journal of Hydrology; Natural Hazards; Stochastic Environmental Research and Risk Assessment; Journal of Water Resources Planning and Management; Journal of Hydro-environmental Research
+      - bullet: |
+          **Professional Memberships**
+          - Decision Making Under Deep Uncertainty Society
+          - American Geophysical Union
+          - American Society of Civil Engineers
+          - Asia Oceania Geosciences Society
+          - Korea Water Resources Association
+      - bullet: |
+          **Expert Panel Reviews and Advisory Activities**
+          - Panel Reviewer, Gulf Research Program, National Academies of Sciences, Engineering, and Medicine (NASEM)
+          - Expert Reviewer, IPCC Special Report on Climate Change and Cities
+      - bullet: |
+          **Journal Peer Reviews**
+          - Earth's Future
+          - Water Resources Research
+          - Journal of Hydrology
+          - Natural Hazards
+          - Stochastic Environmental Research and Risk Assessment
+          - Journal of Water Resources Planning and Management
+          - Journal of Hydro-environmental Research
