@@ -1,0 +1,56 @@
+
+<!-- ######################################################################## -->
+<!-- 
+	menu name:		홈페이지 / 서체
+-->
+<!-- ######################################################################## -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width">
+	<title>서울소개 | 서울특별시</title>
+	<meta property="og:title" content="서울특별시 서울소개">
+	<meta property="og:image" content="https://www.seoul.go.kr/res_newseoul/images/main/seoul_slogan.jpg">
+	<meta property="og:title" content="서체 | 서울특별시">			
+	<meta property="og:description" content="서울서체 소개, 저작권 안내, 디자인 파일 구성, 서체 다운로드, 서체별(서울한강체, 서울남산체, 서울알림체) 특징 비교">
+	<meta property="og:image:height" content="100">
+	<meta property="og:image:height" content="200">	
+	<meta property="og:type" content="website">
+</head>
+<body>	
+<script>
+
+	window.addEventListener("load", function(){
+		
+		setTimeout(function(){
+			var win;
+			win = window.open("https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip","_blank");
+		
+			if(win){
+				history.back();
+			}else{
+				alert("팝업 차단 기능이 설정되어 있습니다.\r\n차단 기능을 해제(팝업허용)한 후 다시 이용해 주십시오.\r\n만약 팝업차단 기능을 해제하지 않으면\r\n정상적인 다운로드가 이루어지지 않습니다.");
+			}
+		},500);
+	});
+</script>
+
+
+<!-- weblog -->
+<script src="//weblog.eseoul.go.kr/wlo/js/install.js" ></script>
+<!-- //weblog -->
+
+</body>
+
+</html>
+
