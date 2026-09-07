@@ -58,6 +58,7 @@ calendar: false
         <a href="{{ course.field_trip | relative_url }}">Field Trip Photos (Han River Flood Control Office)</a>
       </p>
     </div>
+
   </div>
 
   <h2 class="year">Pre-2022</h2>

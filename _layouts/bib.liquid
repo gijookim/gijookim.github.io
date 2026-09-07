@@ -29,7 +29,7 @@
         {% if entry.doi %}
           {% assign preview_link = entry.doi | prepend: 'https://doi.org/' %}
         {% else %}
-          {% assign preview_link = nil %}
+          {% assign preview_link = null %}
         {% endif %}
         {%- comment -%}
           A preview may be a video file rather than an image. Rendering one through the

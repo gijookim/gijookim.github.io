@@ -123,6 +123,7 @@ nav_order: 3
         <img src="{{ '/assets/img/sponsors/usace-logo.svg' | relative_url }}" alt="U.S. Army Corps of Engineers logo">
       </div>
     </div>
+
   </section>
 
   <section class="project-section">
@@ -204,5 +205,6 @@ nav_order: 3
         <img src="{{ '/assets/img/sponsors/korea-moe-logo.svg' | relative_url }}" class="logo-emblem" alt="Ministry of Environment, Republic of Korea logo">
       </div>
     </div>
+
   </section>
 </div>
