@@ -25,8 +25,10 @@ calendar: false
         <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
       </h3>
       <div class="course-meta">
-        <span class="course-term">{{ course.term }}</span>
-        <span class="course-instructor">{{ course.instructor }}</span>
+        <strong>
+          <span class="course-instructor">{{ course.instructor }}</span>
+          <span class="course-term">{{ course.term }}</span>
+        </strong>
       </div>
       <div class="course-description">{{ course.description | markdownify }}</div>
       <p>
@@ -45,8 +47,10 @@ calendar: false
         <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
       </h3>
       <div class="course-meta">
-        <span class="course-term">{{ course.term }}</span>
-        <span class="course-instructor">{{ course.instructor }}</span>
+        <strong>
+          <span class="course-instructor">{{ course.instructor }}</span>
+          <span class="course-term">{{ course.term }}</span>
+        </strong>
       </div>
       <div class="course-description">{{ course.description | markdownify }}</div>
       <p>
