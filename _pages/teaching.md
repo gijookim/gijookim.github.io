@@ -61,17 +61,15 @@ calendar: false
   </div>
 
   <h2 class="year">Pre-2022</h2>
-  <div class="course-list">
-    {% assign course = site.teachings | where: 'course_id', 'teaching-assistant' | first %}
-    <div class="course-item">
-      <h3 class="course-title">
-        <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
-      </h3>
-      <div class="course-meta">
-        <span class="course-term">{{ course.term }}</span>
-        <span class="course-instructor">{{ course.instructor }}</span>
-      </div>
-      <div class="course-description">{{ course.description | markdownify }}</div>
-    </div>
-  </div>
+  <p>
+    <strong>Teaching Assistant (Fall 2018 - Fall 2021)</strong><br>
+    Civil &amp; Environmental Engineering, Seoul National University
+  </p>
+  <ul>
+    <li>Hydrology</li>
+    <li>Water Resources Systems Engineering</li>
+    <li>Statistical Hydrology</li>
+    <li>Disaster and Risk Management</li>
+    <li>Water Resources Engineering</li>
+  </ul>
 </div>
