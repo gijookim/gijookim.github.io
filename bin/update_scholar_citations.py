@@ -19,6 +19,8 @@ def load_scholar_user_id() -> str:
         with open(config_file, "r") as f:
             config = yaml.safe_load(f)
         scholar_user_id = config.get("scholar_userid")
+        if isinstance(scholar_user_id, dict):
+            scholar_user_id = scholar_user_id.get("value")
         if not scholar_user_id:
             print(
                 "No 'scholar_userid' found in the configuration file. Please add 'scholar_userid' to _data/socials.yml."
