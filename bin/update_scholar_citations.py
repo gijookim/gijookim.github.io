@@ -2,9 +2,12 @@
 
 import os
 import sys
+import tempfile
 import yaml
 from datetime import datetime
 from scholarly import scholarly
+from scholarly._proxy_generator import MaxTriesExceededException
+from requests.exceptions import ConnectionError, Timeout
 
 
 def load_scholar_user_id() -> str:
@@ -70,6 +73,9 @@ def get_scholar_citations() -> None:
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
         author_data = scholarly.fill(author)
+    except (MaxTriesExceededException, ConnectionError, Timeout) as e:
+        print(f"Google Scholar is temporarily unavailable; keeping saved citations: {e}")
+        sys.exit(75)
     except Exception as e:
         print(
             f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
@@ -117,8 +123,13 @@ def get_scholar_citations() -> None:
         return
 
     try:
-        with open(OUTPUT_FILE, "w") as f:
+        # Replace only after a complete write, including when CI times out.
+        with tempfile.NamedTemporaryFile(
+            mode="w", dir=os.path.dirname(OUTPUT_FILE), suffix=".tmp", delete=False
+        ) as f:
             yaml.dump(citation_data, f, width=1000, sort_keys=True)
+            temporary_path = f.name
+        os.replace(temporary_path, OUTPUT_FILE)
         print(f"Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
         print(

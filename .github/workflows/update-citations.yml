@@ -13,14 +13,14 @@ permissions:
 
 jobs:
   update-citations:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.13"
 
@@ -56,6 +56,9 @@ jobs:
           if [ $status -eq 0 ]; then
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
             echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
+          elif [ "$status" -eq 75 ] || [ "$status" -eq 124 ]; then
+            echo "::warning::Google Scholar could not be reached. Saved counts are retained; retrying at the next scheduled run."
+            echo "Citation refresh deferred: Google Scholar was unavailable or timed out. Saved counts are unchanged." >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
