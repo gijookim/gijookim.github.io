@@ -276,7 +276,9 @@
       {% endif %}
       {% assign data_link = entry.data | default: entry.zenodo %}
       {% if data_link %}
-        <a href="{{ data_link }}" class="btn btn-sm z-depth-0" style="border-color: #1682d4; color: #1682d4;" role="button">{{ entry.data_label | default: 'Zenodo' }}</a>
+        <a href="{{ data_link }}" class="btn btn-sm z-depth-0" style="border-color: #1682d4; color: #1682d4;" role="button">
+          {{- entry.data_label | default: 'Zenodo' -}}
+        </a>
       {% endif %}
       {% assign scholar_userid = site.data.socials.scholar_userid.value | default: site.data.socials.scholar_userid %}
       {% if site.enable_publication_badges.google_scholar and entry.google_scholar_id %}
