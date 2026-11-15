@@ -1,10 +1,14 @@
 metadata:
-  last_updated: '2026-10-26'
+  last_updated: '2026-11-15'
 papers:
   nyhZ_9EAAAAJ:2osOgNQ5qMEC:
     citations: 36
     title: Improving the robustness of reservoir operations with stochastic dynamic programming
     year: '2021'
+  nyhZ_9EAAAAJ:4TOpqqG69KYC:
+    citations: 0
+    title: "Hydropower Site-level Monthly Availability Data Ensemble for 1950\u20132100 at Existing and Potential Global Sites"
+    year: '2026'
   nyhZ_9EAAAAJ:5nxA0vEk-isC:
     citations: 3
     title: 'A study on the feasibility analysis of the current flood season: a case study of the Yongdam Dam'
@@ -22,7 +26,7 @@ papers:
     title: Development of a Shared Vision Model for Future Drought Vulnerability Analysis
     year: '2019'
   nyhZ_9EAAAAJ:KlAtU1dfN6UC:
-    citations: 0
+    citations: 1
     title: 'Repository of HydroSMADE: Hydropower Site-level Monthly Availability Data Ensemble for 1950-2100 at Existing and Potential Global Sites'
     year: '2026'
   nyhZ_9EAAAAJ:LkGwnXOMwfcC:
@@ -34,7 +38,7 @@ papers:
     title: Identifying the Key Drivers of Global and Regional Food-Energy-Water Security Outcomes through Scenario Discovery
     year: '2024'
   nyhZ_9EAAAAJ:Tyk-4Ss8FVUC:
-    citations: 12
+    citations: 13
     title: Elicitation of drought alternatives based on water policy council and the role of shared vision model
     year: '2019'
   nyhZ_9EAAAAJ:ULOm3_A8WrAC:
@@ -42,7 +46,7 @@ papers:
     title: Projecting Future Global and Regional Hydropower Expansion Considering Human and Earth System Interactions
     year: '2025'
   nyhZ_9EAAAAJ:UeHWp8X0CEIC:
-    citations: 9
+    citations: 10
     title: How does the coupling of real-world policies with optimization models expand the practicality of solutions in reservoir operation problems?
     year: '2021'
   nyhZ_9EAAAAJ:Y0pCki6q_DkC:
